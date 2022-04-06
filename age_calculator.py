@@ -1,5 +1,7 @@
-from datetime import date, datetime
+from datetime import date
 from webbrowser import get
+
+import datetime
 
 
 def get_dob():
@@ -8,19 +10,29 @@ def get_dob():
 	mounth=input("Enter the Mounth of bitrh: ")
 	day=input("Enter the Day of bitrh: ")
 
-	if year.isdigit() == False or day.isdigit() == False or mounth.isdigit() == False:
-		print("date in invalid")
-		return
-	else:
-		return date(int(year),int(mounth),int(day))
+
+	# if year.isdigit() == False:
+	# 	print("Year in invalid")
+	# 	return
+	
+	# elif mounth.isdigit() == False:
+	# 	print("Mounth in invalid")
+	# 	return
+		
+	# elif day.isdigit() == False:
+	# 	print("Day in invalid")
+	# 	return
+	# else:
+	print("date:",(date(int(year),int(mounth),int(day))))
+	return date(int(year),int(mounth),int(day))
 	...
 
 
 def get_age(dob):
     # write code here
-	today = date.today()
-	age = today - dob
-	return int(age.days // 365)
+	today = datetime.date.today()
+	age = int((today - dob).days / 365)
+	return age
 	...
 
 
