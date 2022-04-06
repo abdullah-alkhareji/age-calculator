@@ -5,8 +5,8 @@ from webbrowser import get
 def get_dob():
     # write code here
 	year=input("Enter the Year of bitrh: ")
-	mounth=input("Enter the Year of bitrh: ")
-	day=input("Enter the Year of bitrh: ")
+	mounth=input("Enter the Mounth of bitrh: ")
+	day=input("Enter the Day of bitrh: ")
 
 	if year.isdigit() == False:
 		print("Year is invaled")
