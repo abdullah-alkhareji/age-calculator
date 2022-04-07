@@ -23,7 +23,7 @@ def get_dob():
 	# 	print("Day in invalid")
 	# 	return
 	# else:
-	print("date:",(date(int(year),int(mounth),int(day))))
+	# print("date:",(date(int(year),int(mounth),int(day))))
 	return date(int(year),int(mounth),int(day))
 	...
 
@@ -45,8 +45,10 @@ def main():
 		age = get_age(dob)
 		if age < 0:
 			print("You will Born in future Insha'Allah")
+			return
 		else:
-			print(f"Your age is {age} years old")
+			print(f"You are {age} years old.")
+			return
 
 	...
 
